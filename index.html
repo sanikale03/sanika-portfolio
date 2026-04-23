@@ -2,164 +2,237 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanika Kale | Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 600;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      color: #cbd5f5;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.5);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanika Kale — AI & ML Enthusiast</title>
+  <link rel="shortcut icon" href="./images/profile.jpeg" type="image/x-icon">   
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
 </head>
-
 <body>
 
-<header>
-  <h1>Sanika Kale</h1>
-  <p>AI & Machine Learning Enthusiast | Data Analyst</p>
-</header>
+<!-- Floating orbs -->
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
+<!-- ─── NAVBAR ─────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">SK.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am passionate about AI and Machine Learning with a strong foundation in data analysis.
-      I love turning raw data into meaningful insights and building intelligent solutions.
+<!-- ─── HERO ───────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Open to Opportunities
+    </div>
+    <h1 class="hero-name">
+      <span class="first">Sanika</span><br>
+      <span class="last">Kale</span>
+    </h1>
+    <p class="hero-role" id="typingText"></p>
+    <p class="hero-desc">
+      Transforming raw data into actionable intelligence — one model at a time.
+      Passionate about building intelligent systems that solve real-world problems.
     </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">
+        <i class="fa-solid fa-folder-open"></i> View Projects
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        <i class="fa-solid fa-paper-plane"></i> Get in Touch
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
+<!-- ─── ABOUT ─────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-img-ring">
+          <div class="about-img-placeholder">
+            <img src="./images/profile.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-sub reveal" style="margin-bottom:8px">Nice to meet you</p>
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+        <div class="divider reveal reveal-delay-1"></div>
+        <p class="about-intro reveal reveal-delay-2">
+          I'm <strong>Sanika Kale</strong>, an <strong>AI & Machine Learning enthusiast</strong> and <strong>Data Analyst</strong> with a passion for uncovering patterns in complex datasets. I bridge the gap between raw data and meaningful decisions through statistical modeling, predictive analytics, and intuitive visualizations.
+        </p>
+        <p class="about-intro reveal reveal-delay-2" style="margin-top:-8px">
+          I enjoy working at the intersection of <strong>data science and business intelligence</strong>, building pipelines and dashboards that empower teams to act with confidence. Always curious, always learning.
+        </p>
+        <div class="about-tags reveal reveal-delay-3">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Visualization</span>
+          <span class="tag">SQL</span>
+        </div>
+        <a href="http://github.com/sanikale03" target="_blank" class="btn btn-primary reveal reveal-delay-4" style="width:fit-content">
+          <i class="fa-brands fa-github"></i> GitHub Profile
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECTS ──────────────────────────────────── -->
 <section id="projects">
-  <h2>Projects</h2>
-  <div class="card-container">
-    <div class="card">Sales Prediction using Machine Learning</div>
-    <div class="card">Customer Segmentation Analysis</div>
-    <div class="card">AI Chatbot using NLP</div>
+  <div class="container">
+    <p class="section-sub reveal" style="margin-bottom:8px">What I've built</p>
+    <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+    <div class="divider reveal reveal-delay-1"></div>
+    <p class="section-sub reveal reveal-delay-2">
+      Latest repositories fetched live from GitHub — featuring ML models, data pipelines, and analytical tools.
+    </p>
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Skeleton loaders -->
+      <div class="project-card" id="sk1">
+        <div class="project-card-top"><div class="skeleton sk-circle" style="width:44px;height:44px"></div><div class="skeleton" style="width:34px;height:34px;border-radius:10px"></div></div>
+        <div class="skeleton sk-line" style="width:60%;margin-bottom:12px"></div>
+        <div class="skeleton sk-line" style="width:90%;margin-bottom:8px"></div>
+        <div class="skeleton sk-line" style="width:75%;margin-bottom:24px"></div>
+        <div style="display:flex;gap:10px"><div class="skeleton sk-line" style="width:70px;height:22px;border-radius:999px"></div><div class="skeleton sk-line" style="width:60px;height:22px;border-radius:999px"></div></div>
+      </div>
+      <div class="project-card" id="sk2">
+        <div class="project-card-top"><div class="skeleton sk-circle" style="width:44px;height:44px"></div><div class="skeleton" style="width:34px;height:34px;border-radius:10px"></div></div>
+        <div class="skeleton sk-line" style="width:50%;margin-bottom:12px"></div>
+        <div class="skeleton sk-line" style="width:85%;margin-bottom:8px"></div>
+        <div class="skeleton sk-line" style="width:70%;margin-bottom:24px"></div>
+        <div style="display:flex;gap:10px"><div class="skeleton sk-line" style="width:65px;height:22px;border-radius:999px"></div><div class="skeleton sk-line" style="width:75px;height:22px;border-radius:999px"></div></div>
+      </div>
+      <div class="project-card" id="sk3">
+        <div class="project-card-top"><div class="skeleton sk-circle" style="width:44px;height:44px"></div><div class="skeleton" style="width:34px;height:34px;border-radius:10px"></div></div>
+        <div class="skeleton sk-line" style="width:65%;margin-bottom:12px"></div>
+        <div class="skeleton sk-line" style="width:95%;margin-bottom:8px"></div>
+        <div class="skeleton sk-line" style="width:80%;margin-bottom:24px"></div>
+        <div style="display:flex;gap:10px"><div class="skeleton sk-line" style="width:55px;height:22px;border-radius:999px"></div><div class="skeleton sk-line" style="width:80px;height:22px;border-radius:999px"></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- ─── SKILLS ────────────────────────────────────── -->
 <section id="skills">
-  <h2>Skills</h2>
-  <div class="card-container">
-    <div class="card">Python</div>
-    <div class="card">Machine Learning</div>
-    <div class="card">SQL</div>
-    <div class="card">Power BI / Tableau</div>
-    <div class="card">Pandas & NumPy</div>
+  <div class="container">
+    <p class="section-sub reveal" style="margin-bottom:8px">My toolkit</p>
+    <h2 class="section-title reveal">Skills &amp; <span>Technologies</span></h2>
+    <div class="divider reveal reveal-delay-1"></div>
+    <p class="section-sub reveal reveal-delay-2">
+      A curated set of tools and technologies I work with to build intelligent, data-driven solutions.
+    </p>
+    <div class="skills-grid" id="skillsGrid"></div>
   </div>
 </section>
 
+<!-- ─── CONTACT ───────────────────────────────────── -->
 <section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: sanika@example.com</p>
-    <p>LinkedIn: linkedin.com/in/sanika</p>
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <p class="section-sub reveal" style="margin-bottom:8px">Let's connect</p>
+        <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+        <div class="divider reveal reveal-delay-1"></div>
+        <p class="reveal reveal-delay-2">
+          Have a project in mind, a question, or just want to say hi? I'm always open to interesting conversations and new opportunities.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:sanikakale348@gmail.com" class="contact-link reveal reveal-delay-2">
+            <div class="contact-link-icon" style="background:linear-gradient(135deg,rgba(99,179,237,0.15),rgba(6,182,212,0.1));border:1px solid rgba(99,179,237,0.2)">
+              <i class="fa-solid fa-envelope" style="color:var(--accent)"></i>
+            </div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-value">sanikakale348@gmail.com</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-link-arrow"></i>
+          </a>
+          <a href="https://linkedin.com/in/sanika-kale-4073b0400" target="_blank" class="contact-link reveal reveal-delay-3">
+            <div class="contact-link-icon" style="background:linear-gradient(135deg,rgba(10,102,194,0.2),rgba(10,102,194,0.1));border:1px solid rgba(10,102,194,0.3)">
+              <i class="fa-brands fa-linkedin-in" style="color:#0a66c2"></i>
+            </div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-value">linkedin.com/in/sanika-kale-4073b0400</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-link-arrow"></i>
+          </a>
+          <a href="https://github.com/sanikale03" target="_blank" class="contact-link reveal reveal-delay-4">
+            <div class="contact-link-icon" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1)">
+              <i class="fa-brands fa-github" style="color:var(--text-soft)"></i>
+            </div>
+            <div class="contact-link-text">
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-value">github.com/sanikale03</div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-link-arrow"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form reveal reveal-delay-2">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="Raj Patel" />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="raj@example.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="Project collaboration" />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Hi Sanika, I'd love to discuss..."></textarea>
+          </div>
+          <button class="btn-submit">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- ─── FOOTER ────────────────────────────────────── -->
 <footer>
-  <p>© 2026 Sanika Kale</p>
+  <div class="footer-inner">
+    <p>© 2026 <span>Sanika Kale</span>.
+    <div class="footer-socials">
+      <a href="https://github.com/sanikale03" target="_blank" class="footer-social"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/sanika-kale-4073b0400" target="_blank" class="footer-social"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:sanikakale348@gmail.com" class="footer-social"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
 </footer>
 
+  <script src="./js/script.js"></script>
 </body>
 </html>
